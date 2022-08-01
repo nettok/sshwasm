@@ -1,0 +1,13 @@
+[package]
+name = "sshwasm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = { version = "1.0", features = ["backtrace"] }
+clap = { version = "3.2", features = ["derive"] }
+ssh2 = "0.9"
+wasmtime = "0.39"
+wasmtime-wasi = "0.39"
