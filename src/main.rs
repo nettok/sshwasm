@@ -6,12 +6,15 @@ use std::str;
 use sshwasm::ssh::connect;
 use sshwasm::wasm::run_script;
 
+/// SSH into a machine and execute commands scripted with WebAssembly
 #[derive(Parser)]
 #[clap(author, version, about, long_about = None)]
 struct Cli {
+    /// Destination host to SSH into (example: username@hostname:22)
     #[clap(value_parser)]
     destination: String,
 
+    /// WebAssembly file (format can be .wasm or .wat)
     #[clap(value_parser)]
     webassembly: PathBuf,
 }
